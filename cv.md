@@ -1,3 +1,5 @@
+<img src="assets/avatar.jpg" alt="Pavel Tsykunov" width=200>
+
 # Pavel Tsykunov
 
 ## Contacts
