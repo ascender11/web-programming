@@ -16,6 +16,28 @@
     <title>Molecule</title>
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <header
+      class="mx-auto flex items-center justify-between px-6 py-4 sm:px-12.5 sm:py-3.75 lg:max-w-360 lg:px-20"
+    >
+      <img
+        src="/images/full-logo.svg"
+        alt="Molecule full logo"
+        class="max-xs:w-25 max-xs:h-6.5"
+      />
+      <nav aria-label="Main navigation" class="hidden lg:flex">
+        <ul class="flex gap-8">
+          <li><a href="#" class="text-purple">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Open positions</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Template</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="button bg-dark hidden text-white lg:flex">Buy now</a>
+      <div class="max-xs:w-6 flex lg:hidden">
+        <img src="/icons/burger-menu-icon.svg" alt="Burger menu icon" />
+      </div>
+    </header>
   </body>
 </html>
