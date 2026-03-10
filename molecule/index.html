@@ -39,5 +39,53 @@
         <img src="/icons/burger-menu-icon.svg" alt="Burger menu icon" />
       </div>
     </header>
+
+    <main>
+      <section
+        class="section bg-dark flex flex-col items-center justify-between gap-2.5 sm:gap-15 xl:flex-row xl:justify-between xl:gap-0"
+      >
+        <div
+          class="flex max-w-150 flex-col items-center justify-center gap-2.5 lg:items-start"
+        >
+          <h1 class="text-center text-2xl text-white md:text-4xl lg:text-left">
+            Molecule is a SaaS marketing template that's
+            <span class="text-purple">easy to modify</span>.
+          </h1>
+          <p class="text-center text-sm text-white md:text-lg lg:text-left">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+            vitae erat.
+          </p>
+          <form class="flex w-full max-w-95 gap-2 sm:max-w-120 sm:gap-4">
+            <div class="w-full">
+              <label for="email" class="sr-only">Email address</label>
+              <input
+                id="email"
+                name="email"
+                autocomplete="email"
+                class="input w-full"
+                placeholder="Enter your email"
+                type="email"
+              />
+            </div>
+            <button type="submit" class="button bg-white">Sign Up</button>
+          </form>
+          <p class="text-xxs text-white md:text-xs">
+            By clicking Sign Up you're confirming that you agree with our
+            <a href="#" class="text-purple cursor-pointer"
+              >Terms and Conditions</a
+            >.
+          </p>
+        </div>
+        <div class="flex justify-center">
+          <img
+            src="/images/hero-image.svg"
+            alt="Hero image"
+            class="h-auto max-w-full"
+          />
+        </div>
+      </section>
+    </main>
   </body>
 </html>
