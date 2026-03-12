@@ -33,6 +33,8 @@
   --text-xxs: 10px;
   --text-xxs--line-height: 1.5;
 
+  --animate-marquee: marquee 20s linear infinite;
+
   --breakpoint-xs: 480px;
 }
 
@@ -105,5 +107,18 @@
 
   .input::placeholder {
     @apply text-dark text-xs sm:text-base;
+  }
+
+  .logo {
+    @apply h-auto max-h-10 w-auto max-w-22.5 sm:max-h-14 sm:max-w-32;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
