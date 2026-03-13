@@ -112,6 +112,17 @@
   .logo {
     @apply h-auto max-h-10 w-auto max-w-22.5 sm:max-h-14 sm:max-w-32;
   }
+
+  .section-tag {
+    @apply flex w-21 items-center justify-center rounded-full text-xs text-white sm:w-30 sm:text-base;
+  }
+}
+
+@layer utilities {
+  .filter-yellow {
+    filter: brightness(0) saturate(100%) invert(97%) sepia(50%) saturate(4101%)
+      hue-rotate(317deg) brightness(98%) contrast(104%);
+  }
 }
 
 @keyframes marquee {
