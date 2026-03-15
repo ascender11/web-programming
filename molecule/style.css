@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+:root {
+  --swiper-navigation-size: 16px !important;
+}
+
 @theme {
   --font-roboto: "Roboto", system-ui, sans-serif;
 
@@ -116,12 +120,83 @@
   .section-tag {
     @apply flex w-21 items-center justify-center rounded-full text-xs text-white sm:w-30 sm:text-base;
   }
+
+  .swiper {
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (min-width: 640px) {
+      gap: 20px;
+    }
+
+    @media (min-width: 1024px) {
+      gap: 30px;
+    }
+  }
+
+  .swiper-slide {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    @media (min-width: 640px) {
+      gap: 20px;
+    }
+
+    @media (min-width: 1024px) {
+      gap: 30px;
+    }
+  }
+  .swiper-button-prev {
+    left: 0 !important;
+    margin: 0 !important;
+  }
+
+  .swiper-button-next {
+    right: 0 !important;
+    margin: 0 !important;
+  }
+
+  .swiper-pagination {
+    display: flex;
+    position: static !important;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    height: 24px;
+  }
+
+  .bullet {
+    transform: none !important;
+    opacity: 100 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    background-color: rgba(34, 34, 34, 40%) !important;
+    width: 5px !important;
+    height: 5px !important;
+
+    @media (min-width: 640px) {
+      width: 8px !important;
+      height: 8px !important;
+    }
+  }
+
+  .bullet.swiper-pagination-bullet-active {
+    background-color: rgb(34, 34, 34) !important;
+  }
 }
 
 @layer utilities {
   .filter-yellow {
     filter: brightness(0) saturate(100%) invert(97%) sepia(50%) saturate(4101%)
       hue-rotate(317deg) brightness(98%) contrast(104%);
+  }
+
+  .filter-dark {
+    filter: brightness(0) saturate(100%) invert(14%) sepia(36%) saturate(576%)
+      hue-rotate(160deg) brightness(95%) contrast(90%);
   }
 }
 
