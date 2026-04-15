@@ -1,0 +1,33 @@
+@layer components {
+  .swiper-slide .animate-fade-up,
+  .swiper-slide .animate-scale,
+  .swiper-slide .animate-fade-left,
+  .swiper-slide .animate-fade-right {
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+
+  .swiper-slide-active .animate-fade-up,
+  .swiper-slide-active .animate-scale,
+  .swiper-slide-active .animate-fade-left,
+  .swiper-slide-active .animate-fade-right {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .swiper-slide-active .animate-fade-up {
+    transform: translateY(0);
+  }
+
+  .swiper-slide-active .animate-scale {
+    transform: scale(1);
+  }
+
+  .swiper-slide-active .animate-fade-left {
+    transform: translateX(0);
+  }
+
+  .swiper-slide-active .animate-fade-right {
+    transform: translateX(0);
+  }
+}

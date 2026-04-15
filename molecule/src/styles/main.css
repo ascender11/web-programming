@@ -20,6 +20,7 @@
 @import "./components/pulse-glow.css";
 @import "./components/mobile-menu.css";
 @import "./components/link-underline.css";
+@import "./components//swiper-animation.css";
 
 @import "./utilities/filters.css";
 @import "./utilities/delays.css";
