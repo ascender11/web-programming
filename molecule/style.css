@@ -102,7 +102,7 @@
   }
 
   .button {
-    @apply flex cursor-pointer items-center justify-center rounded-md px-2.5 py-1.75 text-xs whitespace-nowrap transition-all hover:-translate-y-0.5 active:translate-y-0 sm:px-3.75 sm:py-2.5 sm:text-base;
+    @apply flex cursor-pointer items-center justify-center rounded-md px-2.5 py-1.75 text-xs whitespace-nowrap transition-transform duration-200 hover:scale-105 sm:px-3.75 sm:py-2.5 sm:text-base;
   }
 
   .input {
@@ -298,6 +298,26 @@
   .menu-overlay.show {
     display: block !important;
     opacity: 1;
+  }
+
+  .link-underline {
+    display: inline-block;
+    position: relative;
+  }
+
+  .link-underline::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    background-color: var(--color-purple);
+    width: 0;
+    height: 1.5px;
+    content: "";
+  }
+
+  .link-underline:hover::after {
+    width: 100%;
   }
 }
 
