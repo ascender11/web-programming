@@ -289,7 +289,9 @@
         aria-label="Features"
       >
         <div class="flex flex-1 flex-col gap-2.5 sm:gap-8">
-          <div class="flex flex-col gap-2.5 sm:gap-5">
+          <div
+            class="scroll-animate animate-fade-left flex flex-col gap-2.5 sm:gap-5"
+          >
             <div
               class="section-tag text-dark bg-yellow/60 border-yellow border-2"
             >
@@ -297,12 +299,14 @@
             </div>
 
             <div class="flex flex-col gap-2.5 sm:gap-3.75">
-              <h2 class="text-2xl sm:text-3xl">
+              <h2 class="scroll-animate animate-fade-up text-2xl sm:text-3xl">
                 See how easy it is to
                 <span class="text-yellow">edit Molecule</span> to your liking.
               </h2>
 
-              <p class="text-xs sm:text-base">
+              <p
+                class="scroll-animate animate-fade-up text-xs delay-150 sm:text-base"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
@@ -312,7 +316,9 @@
           </div>
 
           <div class="flex flex-col gap-5 sm:grid sm:grid-cols-2 sm:gap-4">
-            <div class="flex items-start gap-3.75">
+            <div
+              class="scroll-animate animate-fade-up flex items-start gap-3.75 delay-200"
+            >
               <img
                 src="/icons/pages-icon.svg"
                 width="24"
@@ -329,7 +335,9 @@
               </div>
             </div>
 
-            <div class="flex items-start gap-3.75">
+            <div
+              class="scroll-animate animate-fade-up flex items-start gap-3.75 delay-250"
+            >
               <img
                 src="/icons/images-icon.svg"
                 width="24"
@@ -347,7 +355,9 @@
               </div>
             </div>
 
-            <div class="flex items-start gap-3.75">
+            <div
+              class="scroll-animate animate-fade-up flex items-start gap-3.75 delay-300"
+            >
               <img
                 src="/icons/colors-icon.svg"
                 width="24"
@@ -365,7 +375,9 @@
               </div>
             </div>
 
-            <div class="flex items-start gap-3.75">
+            <div
+              class="scroll-animate animate-fade-up flex items-start gap-3.75 delay-350"
+            >
               <img
                 src="/icons/typography-icon.svg"
                 width="24"
@@ -384,10 +396,12 @@
           </div>
         </div>
 
-        <div class="hidden max-w-150 flex-1 sm:block">
+        <div
+          class="scroll-animate animate-fade-right hidden max-w-150 flex-1 delay-100 sm:block"
+        >
           <img
             src="/images/features-image.png"
-            class="aspect-15/11 h-auto w-full object-contain drop-shadow-lg"
+            class="aspect-15/11 h-auto w-full object-contain drop-shadow-lg transition-transform duration-500 hover:scale-105"
             alt=""
             aria-hidden="true"
           />
