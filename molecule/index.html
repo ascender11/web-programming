@@ -479,18 +479,20 @@
         >
           <div class="flex flex-col gap-2.5 sm:gap-7.5">
             <div
-              class="section-tag bg-purple/80 border-purple border-2 text-white"
+              class="scroll-animate animate-fade-left section-tag bg-purple/80 border-purple border-2 text-white"
             >
               Team
             </div>
 
             <div class="flex flex-col gap-2.5 sm:gap-5">
-              <h2 class="text-2xl sm:text-3xl">
+              <h2 class="scroll-animate animate-fade-up text-2xl sm:text-3xl">
                 Meet the <span class="text-purple">talented team</span> behind
                 the molecule SaaS template.
               </h2>
 
-              <p class="text-sm sm:text-lg">
+              <p
+                class="scroll-animate animate-fade-up text-sm delay-150 sm:text-lg"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
@@ -499,31 +501,44 @@
             </div>
           </div>
 
-          <button class="button bg-purple text-white">Meet the team</button>
+          <div class="scroll-animate animate-fade-up delay-300">
+            <button class="button bg-purple text-white transition-transform">
+              Meet the team
+            </button>
+          </div>
         </div>
+
         <div
           class="hidden sm:grid sm:w-full sm:max-w-103 sm:grid-cols-2 sm:gap-3 lg:max-w-149 lg:gap-5"
         >
-          <img
-            src="/images/team-image-1.png"
-            class="aspect-square w-full rounded-2xl"
-            alt=""
-            aria-hidden="true"
-          />
+          <div class="scroll-animate animate-scale delay-200">
+            <img
+              src="/images/team-image-1.png"
+              class="aspect-square w-full rounded-2xl transition-transform duration-300 hover:scale-105"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
 
-          <img
-            src="/images/team-image-2.png"
-            class="row-start-2 aspect-square w-full rounded-2xl"
-            alt=""
-            aria-hidden="true"
-          />
+          <div class="scroll-animate animate-fade-up row-start-2 delay-250">
+            <img
+              src="/images/team-image-2.png"
+              class="aspect-square w-full rounded-2xl transition-transform duration-300 hover:scale-105"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
 
-          <img
-            src="/images/team-image-3.png"
-            class="col-start-2 row-span-2 aspect-square w-full self-center rounded-2xl"
-            alt=""
-            aria-hidden="true"
-          />
+          <div
+            class="scroll-animate animate-fade-right col-start-2 row-span-2 self-center delay-300"
+          >
+            <img
+              src="/images/team-image-3.png"
+              class="aspect-square w-full rounded-2xl transition-transform duration-300 hover:scale-105"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
         </div>
       </section>
 
