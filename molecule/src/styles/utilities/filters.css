@@ -1,0 +1,11 @@
+@layer utilities {
+  .filter-yellow {
+    filter: brightness(0) saturate(100%) invert(97%) sepia(50%) saturate(4101%)
+      hue-rotate(317deg) brightness(98%) contrast(104%);
+  }
+
+  .filter-dark {
+    filter: brightness(0) saturate(100%) invert(14%) sepia(36%) saturate(576%)
+      hue-rotate(160deg) brightness(95%) contrast(90%);
+  }
+}

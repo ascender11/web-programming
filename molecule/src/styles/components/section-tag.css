@@ -1,0 +1,5 @@
+@layer components {
+  .section-tag {
+    @apply flex w-21 items-center justify-center rounded-full text-xs text-white sm:w-30 sm:text-base;
+  }
+}

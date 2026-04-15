@@ -1,0 +1,5 @@
+@layer components {
+  .section {
+    @apply mx-auto gap-2.5 px-6 py-8 sm:px-21 sm:py-16 lg:max-w-360 lg:px-20 lg:py-32;
+  }
+}

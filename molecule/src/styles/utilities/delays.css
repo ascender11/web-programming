@@ -1,0 +1,37 @@
+@layer utilities {
+  .delay-100 {
+    transition-delay: 0.1s;
+  }
+
+  .delay-150 {
+    transition-delay: 0.15s;
+  }
+
+  .delay-200 {
+    transition-delay: 0.2s;
+  }
+
+  .delay-250 {
+    transition-delay: 0.25s;
+  }
+
+  .delay-300 {
+    transition-delay: 0.3s;
+  }
+
+  .delay-350 {
+    transition-delay: 0.35s;
+  }
+
+  .delay-400 {
+    transition-delay: 0.4s;
+  }
+
+  .delay-450 {
+    transition-delay: 0.45s;
+  }
+
+  .delay-500 {
+    transition-delay: 0.5s;
+  }
+}

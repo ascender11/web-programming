@@ -1,0 +1,9 @@
+@layer components {
+  .nav-link {
+    @apply transition-colors duration-300;
+  }
+
+  .nav-link:hover {
+    @apply text-purple;
+  }
+}

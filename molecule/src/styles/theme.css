@@ -1,0 +1,35 @@
+@theme {
+  --font-roboto: "Roboto", system-ui, sans-serif;
+
+  --color-purple: #784fff;
+  --color-yellow: #ffc247;
+  --color-green: #96e847;
+  --color-dark: #1f303b;
+  --color-light: #f5f5f5;
+  --color-white: #ffffff;
+
+  --text-6xl: 56px;
+  --text-6xl--line-height: 1.1;
+  --text-5xl: 48px;
+  --text-5xl--line-height: 1.2;
+  --text-4xl: 38px;
+  --text-4xl--line-height: 1.2;
+  --text-3xl: 32px;
+  --text-3xl--line-height: 1.1;
+  --text-2xl: 24px;
+  --text-2xl--line-height: 1.4;
+  --text-xl: 18px;
+  --text-xl--line-height: 1.4;
+  --text-lg: 18px;
+  --text-lg--line-height: 1.5;
+  --text-base: 16px;
+  --text-base--line-height: 1.5;
+  --text-sm: 14px;
+  --text-sm--line-height: 1.5;
+  --text-xs: 12px;
+  --text-xs--line-height: 1.5;
+  --text-xxs: 10px;
+  --text-xxs--line-height: 1.5;
+
+  --breakpoint-xs: 480px;
+}

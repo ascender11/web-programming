@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root {
+  --swiper-navigation-size: 16px !important;
+}
+
+@import "./base.css";
+
+@import "./theme.css";
+
+@import "./components/section.css";
+@import "./components/button.css";
+@import "./components/input.css";
+@import "./components/logo.css";
+@import "./components/marquee-animation.css";
+@import "./components/section-tag.css";
+@import "./components/nav-link.css";
+@import "./components/swiper.css";
+@import "./components/scroll-animations.css";
+@import "./components/pulse-glow.css";
+@import "./components/mobile-menu.css";
+@import "./components/link-underline.css";
+
+@import "./utilities/filters.css";
+@import "./utilities/delays.css";

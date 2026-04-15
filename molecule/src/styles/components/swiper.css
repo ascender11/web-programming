@@ -1,0 +1,68 @@
+@layer components {
+  .swiper {
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (min-width: 640px) {
+      gap: 20px;
+    }
+
+    @media (min-width: 1024px) {
+      gap: 30px;
+    }
+  }
+
+  .swiper-slide {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    @media (min-width: 640px) {
+      gap: 20px;
+    }
+
+    @media (min-width: 1024px) {
+      gap: 30px;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 0 !important;
+    margin: 0 !important;
+  }
+
+  .swiper-button-next {
+    right: 0 !important;
+    margin: 0 !important;
+  }
+
+  .swiper-pagination {
+    display: flex;
+    position: static !important;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    height: 24px;
+  }
+
+  .bullet {
+    transform: none !important;
+    opacity: 100 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    background-color: rgba(34, 34, 34, 40%) !important;
+    width: 5px !important;
+    height: 5px !important;
+
+    @media (min-width: 640px) {
+      width: 8px !important;
+      height: 8px !important;
+    }
+  }
+
+  .bullet.swiper-pagination-bullet-active {
+    background-color: rgb(34, 34, 34) !important;
+  }
+}

@@ -1,0 +1,5 @@
+@layer components {
+  .logo {
+    @apply h-auto max-h-10 w-auto max-w-22.5 sm:max-h-14 sm:max-w-32;
+  }
+}

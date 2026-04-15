@@ -1,0 +1,9 @@
+@layer components {
+  .input {
+    @apply flex items-start rounded-md border border-black bg-white px-3 py-1.75 text-xs sm:px-6 sm:py-2.5 sm:text-base;
+  }
+
+  .input::placeholder {
+    @apply text-dark text-xs sm:text-base;
+  }
+}
