@@ -24,22 +24,77 @@
       <img
         src="/images/full-logo.svg"
         alt="Molecule full logo"
-        class="max-xs:w-25 max-xs:h-6.5"
+        class="max-xs:w-25 max-xs:h-6.5 scroll-animate animate-fade-left logo-glow ransition-transform transition-transform duration-200 hover:scale-105"
       />
+
       <nav aria-label="Main navigation" class="hidden lg:flex">
         <ul class="flex gap-8">
-          <li><a href="#" class="text-purple">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Open positions</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Template</a></li>
+          <li class="scroll-animate animate-fade-up delay-100">
+            <a href="#" class="text-purple">Home</a>
+          </li>
+          <li class="scroll-animate animate-fade-up delay-150">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="scroll-animate animate-fade-up delay-200">
+            <a href="#" class="nav-link">Pricing</a>
+          </li>
+          <li class="scroll-animate animate-fade-up delay-250">
+            <a href="#" class="nav-link">Open positions</a>
+          </li>
+          <li class="scroll-animate animate-fade-up delay-300">
+            <a href="#" class="nav-link">Blog</a>
+          </li>
+          <li class="scroll-animate animate-fade-up delay-350">
+            <a href="#" class="nav-link">Template</a>
+          </li>
         </ul>
       </nav>
-      <a href="#" class="button bg-dark hidden text-white lg:flex">Buy now</a>
-      <div class="max-xs:w-6 flex lg:hidden">
-        <img src="/icons/burger-menu-icon.svg" alt="Burger menu icon" />
+
+      <div class="scroll-animate animate-fade-right">
+        <a
+          href="#"
+          class="button bg-dark button-pulse hidden text-white lg:flex"
+          >Buy now</a
+        >
       </div>
+
+      <button
+        id="burger-menu-button"
+        class="max-xs:w-6 scroll-animate animate-fade-right flex duration-200 lg:hidden"
+      >
+        <img src="/icons/burger-menu-icon.svg" alt="Burger menu icon" />
+      </button>
+
+      <div
+        id="mobile-menu"
+        class="bg-dark fixed top-0 left-0 z-50 h-full w-64 -translate-x-full transform transition-transform duration-300 lg:hidden"
+      >
+        <div class="flex justify-end p-4">
+          <button id="close-menu" class="text-2xl text-white">✕</button>
+        </div>
+        <ul class="flex flex-col gap-4 px-6">
+          <li><a href="#" class="hover:text-purple text-white">Home</a></li>
+          <li><a href="#" class="hover:text-purple text-white">About</a></li>
+          <li><a href="#" class="hover:text-purple text-white">Pricing</a></li>
+          <li>
+            <a href="#" class="hover:text-purple text-white">Open positions</a>
+          </li>
+          <li><a href="#" class="hover:text-purple text-white">Blog</a></li>
+          <li><a href="#" class="hover:text-purple text-white">Template</a></li>
+          <li class="mt-4">
+            <a
+              href="#"
+              class="button bg-purple inline-block w-full text-center text-white"
+              >Buy now</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div
+        id="menu-overlay"
+        class="fixed inset-0 z-40 hidden bg-black/50 lg:hidden"
+      ></div>
     </header>
 
     <main>
