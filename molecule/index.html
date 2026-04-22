@@ -809,11 +809,15 @@
 
       <section class="section bg-purple" aria-label="Newsletter signup">
         <div
-          class="flex flex-col gap-2.5 rounded-[30px] bg-white p-4 sm:px-10 sm:py-7.5 lg:flex-row lg:gap-20 lg:p-24"
+          class="scroll-animate animate-fade-up flex flex-col gap-2.5 rounded-[30px] bg-white p-4 sm:px-10 sm:py-7.5 lg:flex-row lg:gap-20 lg:p-24"
         >
           <div class="flex flex-1 flex-col gap-2.5">
-            <h2 class="text-2xl sm:text-3xl">Don't miss out!</h2>
-            <p class="text-xs sm:text-base">
+            <h2 class="scroll-animate animate-fade-up text-2xl sm:text-3xl">
+              Don't miss out!
+            </h2>
+            <p
+              class="scroll-animate animate-fade-up text-xs delay-150 sm:text-base"
+            >
               Sign-up & we'll let you know as soon as we have something to show
               off. (Don't worry, we don't spam).
             </p>
@@ -829,19 +833,26 @@
                   id="email-newsletter"
                   name="email"
                   autocomplete="email"
-                  class="input w-full"
+                  class="input focus:border-purple w-full transition-all duration-300 focus:scale-105 focus:shadow-lg"
                   placeholder="Enter your email"
                   type="email"
                 />
               </div>
-              <button type="submit" class="button bg-dark text-white">
-                Sign Up
-              </button>
+              <div class="scroll-animate animate-scale delay-300">
+                <button
+                  type="submit"
+                  class="button bg-dark text-white transition-transform duration-200 hover:scale-105"
+                >
+                  Sign Up
+                </button>
+              </div>
             </form>
 
-            <p class="text-xxs sm:text-xs">
+            <p
+              class="scroll-animate animate-fade-up text-xxs delay-450 sm:text-xs"
+            >
               By clicking Sign Up you're confirming that you agree with our
-              <a href="#" class="text-purple cursor-pointer"
+              <a href="#" class="text-purple link-underline cursor-pointer"
                 >Terms and Conditions</a
               >.
             </p>
