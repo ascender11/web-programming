@@ -862,7 +862,9 @@
 
       <section class="section flex flex-col gap-5 lg:gap-8" aria-label="Blog">
         <div class="flex flex-col items-start gap-2.5 sm:gap-5 lg:gap-7.5">
-          <div class="section-tag bg-purple/80 border-purple border-2">
+          <div
+            class="scroll-animate animate-fade-left section-tag bg-purple/80 border-purple border-2"
+          >
             Blog
           </div>
 
@@ -870,30 +872,40 @@
             class="flex w-full flex-col items-start gap-2.5 sm:flex-row sm:items-end sm:justify-between"
           >
             <div class="flex flex-col gap-2.5">
-              <h2 class="text-2xl sm:text-3xl">
+              <h2 class="scroll-animate animate-fade-up text-2xl sm:text-3xl">
                 The <span class="text-purple">latest news</span> from Molecule.
               </h2>
 
-              <p class="text-sm sm:text-lg">
+              <p
+                class="scroll-animate animate-fade-up text-sm delay-150 sm:text-lg"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
             </div>
 
-            <button class="button bg-dark text-white">View all</button>
+            <div class="scroll-animate animate-fade-up delay-300">
+              <button
+                class="button bg-dark text-white transition-transform duration-200 hover:scale-105"
+              >
+                View all
+              </button>
+            </div>
           </div>
         </div>
 
         <div
           class="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3"
         >
-          <article class="flex flex-col gap-2.5">
+          <article
+            class="scroll-animate animate-fade-up flex flex-col gap-2.5 rounded-2xl transition-all delay-100 duration-300 hover:-translate-y-2 hover:shadow-xl"
+          >
             <img
               src="/images/blog-card-image-1.png"
-              class="rounded-2xl"
+              class="rounded-2xl transition-transform duration-500 hover:scale-105"
               alt=""
               aria-hidden="true"
             />
-            <div class="flex flex-col gap-2.5">
+            <div class="flex flex-col gap-2.5 p-2">
               <h3 class="text-lg">Is remote work for you?</h3>
               <p class="text-xs">
                 Duis tristique sed lorem a vestibulum. Cras commodo consequat
@@ -902,6 +914,7 @@
               <div class="flex items-center gap-2.5">
                 <img
                   src="/images/blog-card-avatar-1.png"
+                  class="transition-transform duration-300 hover:scale-110"
                   alt=""
                   aria-hidden="true"
                 />
@@ -913,14 +926,16 @@
             </div>
           </article>
 
-          <article class="flex flex-col gap-2.5">
+          <article
+            class="scroll-animate animate-fade-up flex flex-col gap-2.5 rounded-2xl transition-all delay-200 duration-300 hover:-translate-y-2 hover:shadow-xl"
+          >
             <img
               src="/images/blog-card-image-2.png"
-              class="rounded-2xl"
+              class="rounded-2xl transition-transform duration-500 hover:scale-105"
               alt=""
               aria-hidden="true"
             />
-            <div class="flex flex-col gap-2.5">
+            <div class="flex flex-col gap-2.5 p-2">
               <h3 class="text-lg">Hiring the right talent</h3>
               <p class="text-xs">
                 Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex,
@@ -929,6 +944,7 @@
               <div class="flex items-center gap-2.5">
                 <img
                   src="/images/blog-card-avatar-2.png"
+                  class="transition-transform duration-300 hover:scale-110"
                   alt=""
                   aria-hidden="true"
                 />
@@ -941,15 +957,15 @@
           </article>
 
           <article
-            class="flex flex-col gap-2.5 sm:hidden lg:flex lg:flex-col lg:gap-2.5"
+            class="scroll-animate animate-fade-up flex flex-col gap-2.5 rounded-2xl transition-all delay-300 duration-300 hover:-translate-y-2 hover:shadow-xl sm:hidden lg:flex"
           >
             <img
               src="/images/blog-card-image-3.png"
-              class="rounded-2xl"
+              class="rounded-2xl transition-transform duration-500 hover:scale-105"
               alt=""
               aria-hidden="true"
             />
-            <div class="flex flex-col gap-2.5">
+            <div class="flex flex-col gap-2.5 p-2">
               <h3 class="text-lg">How to drive sales in SaaS</h3>
               <p class="text-xs">
                 Vestibulum sit amet urna turpis. Mauris euismod elit et nisi
@@ -958,6 +974,7 @@
               <div class="flex items-center gap-2.5">
                 <img
                   src="/images/blog-card-avatar-3.png"
+                  class="transition-transform duration-300 hover:scale-110"
                   alt=""
                   aria-hidden="true"
                 />
