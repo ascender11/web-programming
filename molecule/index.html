@@ -1018,14 +1018,16 @@
         class="flex flex-col gap-3.75 px-6 py-8 sm:flex-row sm:justify-between sm:px-21 sm:py-16 lg:p-20"
       >
         <div class="flex flex-col justify-between gap-3.75 sm:max-w-48.5">
-          <img
-            src="/images/full-logo.svg"
-            class="max-w-48.5"
-            alt="Molecule full logo"
-          />
-          <p class="text-sm">
+          <div class="scroll-animate animate-fade-up">
+            <img
+              src="/images/full-logo.svg"
+              class="max-w-48.5"
+              alt="Molecule full logo"
+            />
+          </div>
+          <p class="scroll-animate animate-fade-up text-sm delay-150">
             © Molecule, LLC. All rights reserved. Powered by
-            <span class="text-purple">Webflow</span>.
+            <span class="text-purple link-underline">Webflow</span>.
           </p>
         </div>
 
@@ -1034,11 +1036,31 @@
             <ul
               class="text-purple flex flex-col gap-2.5 text-xs whitespace-nowrap sm:text-sm lg:text-base"
             >
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Open positions</a></li>
-              <li><a href="#">Blog</a></li>
+              <li class="scroll-animate animate-fade-right delay-100">
+                <a href="#" class="hover:text-purple/70 transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li class="scroll-animate animate-fade-right delay-150">
+                <a href="#" class="hover:text-purple/70 transition-colors"
+                  >About</a
+                >
+              </li>
+              <li class="scroll-animate animate-fade-right delay-200">
+                <a href="#" class="hover:text-purple/70 transition-colors"
+                  >Pricing</a
+                >
+              </li>
+              <li class="scroll-animate animate-fade-right delay-250">
+                <a href="#" class="hover:text-purple/70 transition-colors"
+                  >Open positions</a
+                >
+              </li>
+              <li class="scroll-animate animate-fade-right delay-300">
+                <a href="#" class="hover:text-purple/70 transition-colors"
+                  >Blog</a
+                >
+              </li>
             </ul>
           </nav>
 
@@ -1047,17 +1069,37 @@
               <ul
                 class="text-purple flex flex-col gap-2.5 text-xs whitespace-nowrap sm:text-sm lg:text-base"
               >
-                <li><a href="#">Licensing</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & conditions</a></li>
-                <li><a href="#">Cookie policy</a></li>
+                <li class="scroll-animate animate-fade-right delay-150">
+                  <a href="#" class="hover:text-purple/70 transition-colors"
+                    >Licensing</a
+                  >
+                </li>
+                <li class="scroll-animate animate-fade-right delay-200">
+                  <a href="#" class="hover:text-purple/70 transition-colors"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li class="scroll-animate animate-fade-right delay-250">
+                  <a href="#" class="hover:text-purple/70 transition-colors"
+                    >Terms & conditions</a
+                  >
+                </li>
+                <li class="scroll-animate animate-fade-right delay-300">
+                  <a href="#" class="hover:text-purple/70 transition-colors"
+                    >Cookie policy</a
+                  >
+                </li>
               </ul>
             </nav>
 
             <nav aria-label="Social media">
               <ul class="flex gap-3">
-                <li>
-                  <a href="#" aria-label="Instagram">
+                <li class="scroll-animate animate-scale delay-350">
+                  <a
+                    href="#"
+                    aria-label="Instagram"
+                    class="block transition-transform duration-200 hover:-translate-y-1 hover:scale-110"
+                  >
                     <img
                       src="/icons/instagram-icon.svg"
                       alt=""
@@ -1065,8 +1107,12 @@
                     />
                   </a>
                 </li>
-                <li>
-                  <a href="#" aria-label="Twitter">
+                <li class="scroll-animate animate-scale delay-400">
+                  <a
+                    href="#"
+                    aria-label="Twitter"
+                    class="block transition-transform duration-200 hover:-translate-y-1 hover:scale-110"
+                  >
                     <img
                       src="/icons/twitter-icon.svg"
                       alt=""
@@ -1074,8 +1120,12 @@
                     />
                   </a>
                 </li>
-                <li>
-                  <a href="#" aria-label="LinkedIn">
+                <li class="scroll-animate animate-scale delay-450">
+                  <a
+                    href="#"
+                    aria-label="LinkedIn"
+                    class="block transition-transform duration-200 hover:-translate-y-1 hover:scale-110"
+                  >
                     <img
                       src="/icons/linkedin-icon.svg"
                       alt=""
