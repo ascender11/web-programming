@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icons/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="/src/styles/main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer type="module" src="/src/modules/catalog/main.ts"></script>
+
+    <title>Molecule - Catalog</title>
+  </head>
+  <body>
+    <header
+      class="mx-auto flex items-center justify-between px-6 py-4 sm:px-12.5 sm:py-3.75 lg:max-w-360 lg:px-20"
+    >
+      <img
+        src="/images/full-logo.svg"
+        alt="Molecule full logo"
+        class="max-xs:w-25 max-xs:h-6.5 scroll-animate animate-fade-left logo-glow ransition-transform transition-transform duration-200 hover:scale-105"
+      />
+
+      <nav aria-label="Main navigation" class="hidden lg:flex">
+        <ul class="flex gap-8">
+          <li class="scroll-animate animate-fade-up delay-100">
+            <a href="/pages/home.html" class="nav-link">Home</a>
+          </li>
+          <li class="scroll-animate animate-fade-up delay-150">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="scroll-animate animate-fade-up delay-200">
+            <a href="#" class="nav-link">Pricing</a>
+          </li>
+          <li class="scroll-animate animate-fade-up delay-250">
+            <a href="#" class="nav-link">Open positions</a>
+          </li>
+          <li class="scroll-animate animate-fade-up delay-300">
+            <a href="#" class="nav-link">Blog</a>
+          </li>
+          <li class="scroll-animate animate-fade-up delay-350">
+            <a href="#" class="text-purple">Catalog</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="scroll-animate animate-fade-right">
+        <a
+          href="#"
+          class="button bg-dark button-pulse hidden text-white lg:flex"
+          >Buy now</a
+        >
+      </div>
+
+      <button
+        id="burger-menu-button"
+        class="max-xs:w-6 scroll-animate animate-fade-right flex duration-200 lg:hidden"
+      >
+        <img src="/icons/burger-menu-icon.svg" alt="Burger menu icon" />
+      </button>
+
+      <div
+        id="mobile-menu"
+        class="bg-dark fixed top-0 left-0 z-50 h-full w-64 -translate-x-full transform transition-transform duration-300 lg:hidden"
+      >
+        <div class="flex justify-end p-4">
+          <button id="close-menu" class="text-2xl text-white">✕</button>
+        </div>
+        <ul class="flex flex-col gap-4 px-6">
+          <li><a href="#" class="hover:text-purple text-white">Home</a></li>
+          <li><a href="#" class="hover:text-purple text-white">About</a></li>
+          <li><a href="#" class="hover:text-purple text-white">Pricing</a></li>
+          <li>
+            <a href="#" class="hover:text-purple text-white">Open positions</a>
+          </li>
+          <li><a href="#" class="hover:text-purple text-white">Blog</a></li>
+          <li><a href="#" class="hover:text-purple text-white">Template</a></li>
+          <li class="mt-4">
+            <a
+              href="#"
+              class="button bg-purple inline-block w-full text-center text-white"
+              >Buy now</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div
+        id="menu-overlay"
+        class="fixed inset-0 z-40 hidden bg-black/50 lg:hidden"
+      ></div>
+    </header>
+
+    <main>
+      <section class="mx-auto max-w-360 px-6 py-8 sm:py-12 lg:px-20">
+        <div class="flex items-stretch gap-6">
+          <aside
+            class="scroll-animate animate-fade-left hidden md:block lg:w-72"
+          >
+            <div
+              class="shadow-right h-full rounded-2xl border border-gray-100 bg-white p-6"
+            >
+              <h2
+                class="text-dark mb-4 flex items-center gap-2 text-lg font-bold"
+              >
+                <svg
+                  class="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                  />
+                </svg>
+                Filters
+              </h2>
+
+              <div class="mb-6">
+                <h3 class="text-dark/70 mb-3 text-sm font-semibold">
+                  Categories
+                </h3>
+                <label class="mb-2 flex cursor-pointer items-center gap-2">
+                  <input
+                    type="checkbox"
+                    class="category-filter text-purple focus:ring-purple h-4 w-4 rounded border-gray-300"
+                    value="premium"
+                    checked
+                  />
+                  <span class="text-dark/80 text-sm">Premium</span>
+                  <span class="text-dark/40 ml-auto text-xs">8</span>
+                </label>
+                <label class="flex cursor-pointer items-center gap-2">
+                  <input
+                    type="checkbox"
+                    class="category-filter text-purple focus:ring-purple h-4 w-4 rounded border-gray-300"
+                    value="standard"
+                    checked
+                  />
+                  <span class="text-dark/80 text-sm">Standard</span>
+                  <span class="text-dark/40 ml-auto text-xs">7</span>
+                </label>
+              </div>
+
+              <div class="mb-6">
+                <h3 class="text-dark/70 mb-3 text-sm font-semibold">
+                  Price Range
+                </h3>
+                <div class="mb-3 flex items-center gap-3">
+                  <span class="text-dark/60 text-xs">$0</span>
+                  <input
+                    type="range"
+                    id="price-slider"
+                    min="0"
+                    max="300"
+                    value="0"
+                    class="h-1.5 flex-1 cursor-pointer appearance-none rounded-lg bg-gray-200"
+                  />
+                  <span class="text-dark/60 text-xs">$300+</span>
+                </div>
+                <div class="text-dark/50 flex justify-between text-xs">
+                  <span id="price-value" class="text-purple font-medium"
+                    >Min: $0</span
+                  >
+                </div>
+              </div>
+
+              <div class="mb-6">
+                <h3 class="text-dark/70 mb-3 text-sm font-semibold">Rating</h3>
+                <div class="star-rating-filter flex gap-6">
+                  <div class="stars-container flex cursor-pointer gap-1">
+                    <img
+                      src="/icons/star-icon.svg"
+                      class="star h-5 w-5"
+                      data-value="1"
+                      alt="1 star"
+                    />
+                    <img
+                      src="/icons/star-icon.svg"
+                      class="star h-5 w-5"
+                      data-value="2"
+                      alt="2 star"
+                    />
+                    <img
+                      src="/icons/star-icon.svg"
+                      class="star h-5 w-5"
+                      data-value="3"
+                      alt="3 star"
+                    />
+                    <img
+                      src="/icons/star-icon.svg"
+                      class="star h-5 w-5"
+                      data-value="4"
+                      alt="4 star"
+                    />
+                    <img
+                      src="/icons/star-icon.svg"
+                      class="star h-5 w-5"
+                      data-value="5"
+                      alt="5 star"
+                    />
+                  </div>
+                </div>
+                <span class="rating-value text-dark/50 text-xs"
+                  >All ratings</span
+                >
+              </div>
+
+              <div class="flex gap-3 border-t border-gray-100 pt-4">
+                <button
+                  id="apply-filters"
+                  class="bg-purple hover:bg-purple/90 flex-1 rounded-xl py-2.5 text-sm font-medium text-white transition-colors"
+                >
+                  Apply
+                </button>
+                <button
+                  id="reset-filters"
+                  class="text-dark/70 flex-1 rounded-xl bg-gray-100 py-2.5 text-sm font-medium transition-colors hover:bg-gray-200"
+                >
+                  Reset
+                </button>
+              </div>
+            </div>
+          </aside>
+
+          <div class="flex flex-col">
+            <h1
+              class="scroll-animate animate-fade-up mb-8 text-3xl sm:text-4xl"
+            >
+              Template Catalog
+            </h1>
+
+            <div class="mb-6 flex flex-col gap-4 sm:flex-row">
+              <div class="relative flex-1">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search by name or description..."
+                  class="focus:border-purple focus:ring-purple w-full rounded-xl border border-gray-300 py-2.5 pr-4 pl-10 text-sm transition-all outline-none placeholder:text-gray-400 focus:ring-1"
+                />
+                <img
+                  src="/icons/search-icon.svg"
+                  alt="Search icon"
+                  class="absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2 text-gray-400"
+                />
+              </div>
+
+              <div class="flex items-center gap-3">
+                <div class="relative">
+                  <select
+                    id="sort-select"
+                    class="focus:border-purple focus:ring-purple w-40 cursor-pointer appearance-none rounded-xl border border-gray-300 py-2.5 pr-10 pl-4 text-sm transition-all outline-none focus:ring-1"
+                  >
+                    <option value="none">Default</option>
+                    <option value="price">By price</option>
+                    <option value="rating">By rating</option>
+                    <option value="name">By name</option>
+                  </select>
+                  <svg
+                    class="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+
+                <button
+                  id="sort-direction-btn"
+                  class="sort-switch hover:bg-purple/10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-100 transition-all"
+                >
+                  <svg
+                    class="sort-asc h-5 w-5 transition-all duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                  <svg
+                    class="sort-desc h-5 w-5 transition-all duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="mb-6 flex flex-wrap gap-2">
+              <button
+                class="array-method-btn bg-purple/10 text-purple hover:bg-purple/20 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors"
+                data-method="map"
+              >
+                Map (×1.2 prices)
+              </button>
+              <button
+                class="array-method-btn bg-purple/10 text-purple hover:bg-purple/20 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors"
+                data-method="filter"
+              >
+                Filter (premium only)
+              </button>
+              <button
+                class="array-method-btn bg-purple/10 text-purple hover:bg-purple/20 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors"
+                data-method="reduce"
+              >
+                Reduce (total value)
+              </button>
+              <button
+                class="array-method-btn bg-purple/10 text-purple hover:bg-purple/20 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors"
+                data-method="some"
+              >
+                Some (has premium?)
+              </button>
+              <button
+                class="array-method-btn bg-purple/10 text-purple hover:bg-purple/20 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors"
+                data-method="every"
+              >
+                Every (all > $50?)
+              </button>
+              <button
+                class="array-method-btn bg-purple/10 text-purple hover:bg-purple/20 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors"
+                data-method="find"
+              >
+                Find (cheapest)
+              </button>
+              <button
+                class="array-method-btn bg-purple/10 text-purple hover:bg-purple/20 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors"
+                data-method="findIndex"
+              >
+                FindIndex (first premium)
+              </button>
+              <button
+                class="array-method-btn bg-purple/10 text-purple hover:bg-purple/20 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors"
+                data-method="sortAsc"
+              >
+                Sort (price ↑)
+              </button>
+              <button
+                class="array-method-btn bg-purple/10 text-purple hover:bg-purple/20 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors"
+                data-method="sortDesc"
+              >
+                Sort (price ↓)
+              </button>
+              <button
+                class="array-method-btn bg-purple/10 text-purple hover:bg-purple/20 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors"
+                data-method="reverse"
+              >
+                Reverse (order)
+              </button>
+            </div>
+
+            <div
+              id="method-result"
+              class="mb-4 hidden rounded-xl bg-blue-50 p-3 text-sm text-blue-700"
+            ></div>
+
+            <div
+              id="catalog-container"
+              class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="flex flex-col gap-3.75 px-6 py-8 sm:flex-row sm:justify-between sm:px-21 sm:py-16 lg:p-20"
+    >
+      <div class="flex flex-col justify-between gap-3.75 sm:max-w-48.5">
+        <div class="scroll-animate animate-fade-up">
+          <img
+            src="/images/full-logo.svg"
+            class="max-w-48.5"
+            alt="Molecule full logo"
+          />
+        </div>
+        <p class="scroll-animate animate-fade-up text-sm delay-150">
+          © Molecule, LLC. All rights reserved. Powered by
+          <span class="text-purple link-underline">Webflow</span>.
+        </p>
+      </div>
+
+      <div class="flex gap-17.5 sm:justify-between lg:gap-22.5">
+        <nav aria-label="Main navigation">
+          <ul
+            class="text-purple flex flex-col gap-2.5 text-xs whitespace-nowrap sm:text-sm lg:text-base"
+          >
+            <li class="scroll-animate animate-fade-right delay-100">
+              <a href="#" class="hover:text-purple/70 transition-colors"
+                >Home</a
+              >
+            </li>
+            <li class="scroll-animate animate-fade-right delay-150">
+              <a href="#" class="hover:text-purple/70 transition-colors"
+                >About</a
+              >
+            </li>
+            <li class="scroll-animate animate-fade-right delay-200">
+              <a href="#" class="hover:text-purple/70 transition-colors"
+                >Pricing</a
+              >
+            </li>
+            <li class="scroll-animate animate-fade-right delay-250">
+              <a href="#" class="hover:text-purple/70 transition-colors"
+                >Open positions</a
+              >
+            </li>
+            <li class="scroll-animate animate-fade-right delay-300">
+              <a href="#" class="hover:text-purple/70 transition-colors"
+                >Blog</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="flex flex-col gap-2.5">
+          <nav aria-label="Legal information">
+            <ul
+              class="text-purple flex flex-col gap-2.5 text-xs whitespace-nowrap sm:text-sm lg:text-base"
+            >
+              <li class="scroll-animate animate-fade-right delay-150">
+                <a href="#" class="hover:text-purple/70 transition-colors"
+                  >Licensing</a
+                >
+              </li>
+              <li class="scroll-animate animate-fade-right delay-200">
+                <a href="#" class="hover:text-purple/70 transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="scroll-animate animate-fade-right delay-250">
+                <a href="#" class="hover:text-purple/70 transition-colors"
+                  >Terms & conditions</a
+                >
+              </li>
+              <li class="scroll-animate animate-fade-right delay-300">
+                <a href="#" class="hover:text-purple/70 transition-colors"
+                  >Cookie policy</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Social media">
+            <ul class="flex gap-3">
+              <li class="scroll-animate animate-scale delay-350">
+                <a
+                  href="#"
+                  aria-label="Instagram"
+                  class="block transition-transform duration-200 hover:-translate-y-1 hover:scale-110"
+                >
+                  <img
+                    src="/icons/instagram-icon.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </li>
+              <li class="scroll-animate animate-scale delay-400">
+                <a
+                  href="#"
+                  aria-label="Twitter"
+                  class="block transition-transform duration-200 hover:-translate-y-1 hover:scale-110"
+                >
+                  <img
+                    src="/icons/twitter-icon.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </li>
+              <li class="scroll-animate animate-scale delay-450">
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  class="block transition-transform duration-200 hover:-translate-y-1 hover:scale-110"
+                >
+                  <img
+                    src="/icons/linkedin-icon.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

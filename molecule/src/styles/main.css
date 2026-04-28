@@ -21,6 +21,10 @@
 @import "./components/mobile-menu.css";
 @import "./components/link-underline.css";
 @import "./components//swiper-animation.css";
+@import "./components/star.css";
+@import "./components/sort-switch.css";
+@import "./components/select.css";
 
 @import "./utilities/filters.css";
 @import "./utilities/delays.css";
+@import "./utilities/shadows.css";

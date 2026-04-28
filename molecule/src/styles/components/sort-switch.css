@@ -1,0 +1,50 @@
+@layer components {
+  .sort-switch {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sort-switch .sort-asc,
+  .sort-switch .sort-desc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .sort-switch.default .sort-asc {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    stroke: #9ca3af;
+  }
+
+  .sort-switch.default .sort-desc {
+    transform: translate(-50%, calc(-50% + 10px));
+    opacity: 0;
+  }
+
+  .sort-switch.asc .sort-asc {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    stroke: #784fff;
+  }
+
+  .sort-switch.asc .sort-desc {
+    transform: translate(-50%, calc(-50% + 10px));
+    opacity: 0;
+  }
+
+  .sort-switch.desc .sort-asc {
+    transform: translate(-50%, calc(-50% - 10px));
+    opacity: 0;
+  }
+
+  .sort-switch.desc .sort-desc {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    stroke: #784fff;
+  }
+}

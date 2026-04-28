@@ -1,31 +1,25 @@
 import Swiper from "swiper";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
+import { SELECTORS, CONFIG } from "../../../utils/constants";
+import { AnimationService } from "../../../services/animation.service";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-export function initFeedbackSwiper(container: string): Swiper {
+export function initFeedbackSlider(): Swiper | null {
+  const container = document.querySelector(SELECTORS.SWIPER);
+  if (!container) return null;
+
+  const animationService = new AnimationService();
   let previousSlide: HTMLElement | null = null;
 
-  const animateSlideElements = (slide: HTMLElement) => {
-    const animatedElements = slide.querySelectorAll(
-      ".animate-fade-up, .animate-scale, .animate-fade-left, .animate-fade-right, .animate-blur, .animate-rotate",
-    );
-
-    animatedElements.forEach((element) => {
-      const el = element as HTMLElement;
-
-      el.classList.remove("animated");
-    });
-  };
-
-  const swiper = new Swiper(container, {
+  const swiper = new Swiper(SELECTORS.SWIPER, {
     modules: [Navigation, Pagination, Autoplay],
     slidesPerView: 1,
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: CONFIG.SWIPER_AUTOPLAY_DELAY,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
@@ -45,21 +39,19 @@ export function initFeedbackSwiper(container: string): Swiper {
       init: (swiperInstance: Swiper) => {
         const activeSlide: HTMLElement =
           swiperInstance.slides[swiperInstance.activeIndex];
-
-        animateSlideElements(activeSlide);
+        animationService.addAnimationToSlide(activeSlide);
         previousSlide = activeSlide;
-
-        console.log("Feedback slider initialized with animations");
       },
       slideChange: (swiperInstance: Swiper) => {
         if (previousSlide) {
-          animateSlideElements(previousSlide);
+          animationService.removeAnimationFromSlide(previousSlide);
         }
 
         const activeSlide: HTMLElement =
           swiperInstance.slides[swiperInstance.activeIndex];
 
-        animateSlideElements(activeSlide);
+        animationService.addAnimationToSlide(activeSlide);
+
         previousSlide = activeSlide;
       },
     },

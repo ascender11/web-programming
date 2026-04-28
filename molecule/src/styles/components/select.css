@@ -1,0 +1,18 @@
+@layer components {
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right 12px center;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    padding-right: 36px;
+  }
+
+  select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(120, 79, 255, 0.1);
+    border-color: #784fff;
+  }
+}
